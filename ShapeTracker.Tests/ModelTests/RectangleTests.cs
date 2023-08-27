@@ -15,12 +15,12 @@ namespace ShapeTracker.Tests
   }
 }
 
-//     [TestMethod]
-//     public void TriangleConstructor_CreatesInstanceOfTriangle_Triangle()
-//     {
-//       Triangle newTriangle = new Triangle(2, 3, 8);
-//       Assert.AreEqual(typeof(Triangle), newTriangle.GetType());
-//     }
+    [TestMethod]
+    public void RectangleConstructor_CreatesInstanceOfRectangle_Rectangle()
+    {
+      Rectangle newRectangle = new Rectangle(5, 10);
+      Assert.AreEqual(typeof(Rectangle), newRectangle.GetType());
+    }
 
 //     [TestMethod]
 //     public void GetSide1_ReturnsSide1_Int()
