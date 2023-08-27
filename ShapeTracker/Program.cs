@@ -1,5 +1,6 @@
 using System;
 using ShapeTracker.Models;
+using System.Collections.Generic;
 
 namespace ShapeTracker
 {
@@ -28,7 +29,7 @@ namespace ShapeTracker
       Console.WriteLine("Please confirm that you entered in your triangle correctly:");
       Console.WriteLine($"Side 1 has a length of {tri.Side1}.");
       Console.WriteLine($"Side 2 has a length of {tri.Side2}.");
-      Console.WriteLine($"Side 3 has a length of {tri.GetSide3()}.");
+      Console.WriteLine($"Side 3 has a length of {tri.Side3}.");
       Console.WriteLine("Is that correct? Enter 'yes' to proceed, or 'no' to re-enter the triangle's sides");
       string userInput = Console.ReadLine();  
       if (userInput == "yes")
@@ -46,7 +47,7 @@ namespace ShapeTracker
         string stringNumber3 = Console.ReadLine();  
         tri.Side1 = int.Parse(stringNumber1);  
         tri.Side2 = int.Parse(stringNumber2);  
-        tri.SetSide3(int.Parse(stringNumber3)); 
+        tri.Side3 = int.Parse(stringNumber3); 
         ConfirmOrEditTriangle(tri);
       }
     }
@@ -62,7 +63,7 @@ namespace ShapeTracker
       if (seeAllResponse == "yes")
       {
         List<Triangle> allTriangles = Triangle.GetAll();
-        foreach (Triangle triangle in all_triangle) 
+        foreach (Triangle triangle in allTriangles) 
         {
         Console.WriteLine($"Triangle sides: Side1={triangle.Side1}, Side2={triangle.Side2}, Side3={triangle.Side3}");
         }
