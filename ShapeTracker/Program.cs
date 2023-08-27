@@ -57,6 +57,22 @@ namespace ShapeTracker
       Console.WriteLine("-----------------------------------------");
       Console.WriteLine("Your result is: " + result + ".");
       Console.WriteLine("-----------------------------------------");
+      Console.WriteLine("Here are all the triables created so far");
+      string seeAllResponse = Console.ReadLine();
+      if (seeAllResponse == "yes")
+      {
+        List<Triangle> allTriangles = Triangle.GetAll();
+        foreach (Triangle triangle in all_triangle) 
+        {
+        Console.WriteLine($"Triangle sides: Side1={triangle.Side1}, Side2={triangle.Side2}, Side3={triangle.Side3}");
+        }
+      }
+      Console.WriteLine("Would you like to clear all previous triangles?");
+      string clearResponse = Console.ReadLine();
+      if (clearResponse == "yes") {
+        Triangle.ClearAll();
+        Console.WriteLine("All triangles cleared.");
+      }
       Console.WriteLine("What's next?");
       Console.WriteLine("Would you like to check a new triangle (new)?");
       Console.WriteLine("Please enter 'new' to check the type of a new triangle. To exit, enter any key.");

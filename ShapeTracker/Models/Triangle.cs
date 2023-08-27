@@ -10,7 +10,7 @@ namespace ShapeTracker.Models
       get { return _side1; }
       set { _side1 = value; }
     }
-    public int Side2 { get; set; }
+    public int Side2 { get; set; } // this is the most common way to set a property per Ryan. Each side shows different ways to set a property.using System.
     private int _side3;
     private static List<Triangle> _instances = new List<Triangle> {};
 
@@ -64,4 +64,3 @@ namespace ShapeTracker.Models
 
   }
 }
-
