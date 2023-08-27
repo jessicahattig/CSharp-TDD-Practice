@@ -58,7 +58,7 @@ namespace ShapeTracker
       Console.WriteLine("-----------------------------------------");
       Console.WriteLine("Your result is: " + result + ".");
       Console.WriteLine("-----------------------------------------");
-      Console.WriteLine("Here are all the triables created so far");
+      Console.WriteLine("Here are all the triangles created so far");
       string seeAllResponse = Console.ReadLine();
       if (seeAllResponse == "yes")
       {
