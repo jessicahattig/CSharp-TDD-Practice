@@ -71,41 +71,16 @@ namespace ShapeTracker.Tests
       Assert.AreEqual(newLength2, newRectangle.Side2);
     }
 
-
-    // [TestMethod]
-    // public void GetSide3_ReturnsSide3_Int()
-    // {
-    //   // Arrange
-    //   int length3 = 55;
-    //   Triangle newTriangle = new Triangle(2, 3, length3);
-    //   // Act
-    //   int result = newTriangle.Side3;
-    //   // Assert
-    //   Assert.AreEqual(length3, result);
-    // }
-
-    // [TestMethod]
-    // public void SetSide3_SetsValueOfSide3_Void()
-    // {
-    //   // Arrange
-    //   Triangle newTriangle = new Triangle(3, 4, 8);
-    //   int newLength3 = 6;
-    //   // Act
-    //   newTriangle.Side3 = newLength3;
-    //   // Assert
-    //   Assert.AreEqual(newLength3, newTriangle.Side3);
-    // }
-
-    // [TestMethod]
-    // public void CheckType_DeterminesWhenNotATriangle_String()
-    // {
-    //   // Arrange
-    //   Triangle notATriangle = new Triangle(3, 4, 88);
-    //   // Act
-    //   string triType = notATriangle.CheckType();
-    //   // Assert
-    //   Assert.AreEqual("not a triangle", triType);
-    // }
+    [TestMethod]
+    public void CheckType_DeterminesWhenSquare_String()
+    {
+      // Arrange
+      Rectangle squaRectangle = new Rectangle(4, 4);
+      // Act
+      string recType = squaRectangle.CheckType();
+      // Assert
+      Assert.AreEqual("it's a square", recType);
+    }
 
     // [TestMethod]
     // public void CheckType_DeterminesWhenScalene_String()
