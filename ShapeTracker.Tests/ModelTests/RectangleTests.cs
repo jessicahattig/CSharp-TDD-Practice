@@ -93,65 +93,17 @@ namespace ShapeTracker.Tests
       Assert.AreEqual("it's a rectangle.", recType);
     }
 
-    // [TestMethod]
-    // public void CheckType_DeterminesWhenScalene_String()
-    // {
-    //   // Arrange
-    //   Triangle scaleneTri = new Triangle(3, 4, 5);
-    //   // Act
-    //   string triType = scaleneTri.CheckType();
-    //   // Assert
-    //   Assert.AreEqual("scalene triangle", triType);
-    // }
-
-    // [TestMethod]
-    // public void CheckType_DeterminesWhenIsosceles_String()
-    // {
-    //   // Arrange
-    //   Triangle isoscelesTri = new Triangle(5, 4, 4);
-    //   // Act
-    //   string triType = isoscelesTri.CheckType();
-    //   // Assert
-    //   Assert.AreEqual("isosceles triangle", triType);
-    // }
-
-    // [TestMethod]
-    // public void CheckType_DeterminesWhenEquilateral_String()
-    // {
-    //   // Arrange
-    //   Triangle equiTri = new Triangle(4, 4, 4);
-    //   // Act
-    //   string triType = equiTri.CheckType();
-    //   // Assert
-    //   Assert.AreEqual("equilateral triangle", triType);
-    // }
-
-    // [TestMethod]
-    // public void GetAll_ReturnsAllTriangleInstances_List()
-    // {
-    //   // Arrange
-    //   Triangle tri1 = new Triangle(2, 2, 9);
-    //   Triangle tri2 = new Triangle(21, 3, 9);
-    //   Triangle tri3 = new Triangle(1, 3, 9);
-    //   List<Triangle> expected = new List<Triangle> { tri1, tri2, tri3 };
-    //   // Act
-    //   List<Triangle> actualResult = Triangle.GetAll();
-    //   // Assert
-    //   CollectionAssert.AreEqual(expected, actualResult);
-    // }
-
-    // [TestMethod]
-    // public void ClearAll_DeletesAllTriangleInList_Void()
-    // {
-    //   // Arrange
-    //   Triangle tri1 = new Triangle(2, 2, 9);
-    //   Triangle tri2 = new Triangle(21, 3, 9);
-    //   Triangle tri3 = new Triangle(1, 3, 9);
-    //   List<Triangle> expected = new List<Triangle> { };
-    //   // Act
-    //   Triangle.ClearAll();
-    //   // Assert
-    //   CollectionAssert.AreEqual(expected, Triangle.GetAll());
-    // }
+    [TestMethod]
+    public void GetAll_ReturnsAllRectangleInstances_List()
+    {
+      //Arrange
+      Rectangle rec1 = new Rectangle(4, 8);
+      Rectangle rec2 = new Rectangle(9, 5);
+      Rectangle rec3 = new Rectangle(2, 5);
+      //Act
+      List<Rectangle> actualResult = Rectangle.GetAll();
+      //Assert
+      CollectionAssert.AreEqual(expected, actualResult);
+    }
   }
 }
