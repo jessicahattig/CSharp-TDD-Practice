@@ -17,7 +17,7 @@ namespace ShapeTracker.Tests
     [TestMethod]
     public void RectangleConstructor_CreatesInstanceOfRectangle_Rectangle()
     {
-      Rectangle newRectangle = new Rectangle();
+      Rectangle newRectangle = new Rectangle(4, 6);
       Assert.AreEqual(typeof(Rectangle), newRectangle.GetType());
     }
 
@@ -34,29 +34,17 @@ namespace ShapeTracker.Tests
       Assert.AreEqual(length1, result);
     }
 
-    // [TestMethod]
-    // public void GetSide1_ReturnsSide1_Int()
-    // {
-    //   // Arrange
-    //   int length1 = 3;
-    //   Triangle newTriangle = new Triangle(length1, 2, 8);
-    //   // Act
-    //   int result = newTriangle.Side1;
-    //   // Assert
-    //   Assert.AreEqual(length1, result);
-    // }
-
-    // [TestMethod]
-    // public void SetSide1_SetsValueOfSide1_Void()
-    // {
-    //   // Arrange
-    //   Triangle newTriangle = new Triangle(3, 3, 8);
-    //   int newLength1 = 44;
-    //   // Act
-    //   newTriangle.Side1 = newLength1;
-    //   // Assert
-    //   Assert.AreEqual(newLength1, newTriangle.Side1);
-    // }
+    [TestMethod]
+    public void SetSide1_SetsValueOfSide1_Void()
+    {
+      // Arrange
+      Rectangle newRectangle = new Rectangle(2, 8);
+      int newLength1 = 2;
+      // Act
+      newRectangle.Side1 = newLength1;
+      // Assert
+      Assert.AreEqual(newLength1, newRectangle.Side1);
+    }
 
     // [TestMethod]
     // public void GetSide2_ReturnsSide2_Int()
