@@ -6,19 +6,32 @@ using System;
 namespace ShapeTracker.Tests
 {
   [TestClass]
-  public class RectangleTests : IDisposable
+  public class RectangleTests //: IDisposable
   {
-    public void Dispose()
-    {
-      Rectangle.ClearAll();
-    }
+    // public void Dispose()
+    // {
+    //   Rectangle.ClearAll();
+    // }
   
 
     [TestMethod]
     public void RectangleConstructor_CreatesInstanceOfRectangle_Rectangle()
     {
-      Rectangle newRectangle = new Rectangle(5, 10);
+      Rectangle newRectangle = new Rectangle();
       Assert.AreEqual(typeof(Rectangle), newRectangle.GetType());
+    }
+
+    [TestMethod]
+
+    public void GetSide1_ReturnsSide1_Int()
+    {
+      //Arrange
+      int length1 = 4;
+      Rectangle newRectangle = new Rectangle(length1, 6);
+      //Act
+      int result = newRectangle.Side1;
+      //Assert
+      Assert.AreEqual(length1, result);
     }
 
     // [TestMethod]
