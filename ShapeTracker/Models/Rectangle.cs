@@ -17,6 +17,18 @@ namespace ShapeTracker.Models
       _instances.Add(this);
     }
 
+    public string CheckType()
+    {
+      if ((Side1 == Side2) & (Side2 ==Side1))
+      {
+        return "it's a square, which is a special rectangle.";
+      }
+      else 
+      {
+        return "it is a rectangle";
+      }
+    }
+
     public static List<Rectangle> GetAll()
     {
       return _instances;
