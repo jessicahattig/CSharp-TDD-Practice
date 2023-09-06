@@ -71,6 +71,7 @@ namespace ShapeTracker.Tests
       Assert.AreEqual(newLength2, newRectangle.Side2);
     }
 
+
     // [TestMethod]
     // public void GetSide3_ReturnsSide3_Int()
     // {
