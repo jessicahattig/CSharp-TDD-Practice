@@ -48,6 +48,7 @@ namespace ShapeTracker.Tests
 
     [TestMethod]
     public void GetSide2_ReturnsSide2_Int()
+    
     {
       // Arrange
       int length2 = 3;
