@@ -79,7 +79,18 @@ namespace ShapeTracker.Tests
       // Act
       string recType = squaRectangle.CheckType();
       // Assert
-      Assert.AreEqual("it's a square", recType);
+      Assert.AreEqual("it's a square, which is a special rectangle.", recType);
+    }
+
+        [TestMethod]
+    public void CheckType_DeterminesWhenRectangle_String()
+    {
+      // Arrange
+      Rectangle trueRectangle = new Rectangle(4, 6);
+      // Act
+      string recType = trueRectangle.CheckType();
+      // Assert
+      Assert.AreEqual("it's a rectangle.", recType);
     }
 
     // [TestMethod]
