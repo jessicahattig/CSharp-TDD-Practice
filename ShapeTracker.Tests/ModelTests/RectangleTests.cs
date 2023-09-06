@@ -59,17 +59,17 @@ namespace ShapeTracker.Tests
       Assert.AreEqual(length2, result);
     }
 
-    // [TestMethod]
-    // public void SetSide2_SetsValueOfSide2_Void()
-    // {
-    //   // Arrange
-    //   Triangle newTriangle = new Triangle(3,4, 8);
-    //   int newLength2 = 6;
-    //   // Act
-    //   newTriangle.Side2 = newLength2;
-    //   // Assert
-    //   Assert.AreEqual(newLength2, newTriangle.Side2);
-    // }
+    [TestMethod]
+    public void SetSide2_SetsValueOfSide2_Void()
+    {
+      // Arrange
+      Rectangle newRectangle = new Rectangle(3, 4);
+      int newLength2 = 4;
+      // Act
+      newRectangle.Side2 = newLength2;
+      // Assert
+      Assert.AreEqual(newLength2, newRectangle.Side2);
+    }
 
     // [TestMethod]
     // public void GetSide3_ReturnsSide3_Int()
