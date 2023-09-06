@@ -19,13 +19,13 @@ namespace ShapeTracker.Models
 
     public string CheckType()
     {
-      if ((Side1 == Side2) & (Side2 ==Side1))
+      if ((Side1 == Side2) && (Side2 == Side1))
       {
         return "it's a square, which is a special rectangle.";
       }
-      else 
+      else
       {
-        return "it is a rectangle";
+        return "it's a rectangle.";
       }
     }
 
