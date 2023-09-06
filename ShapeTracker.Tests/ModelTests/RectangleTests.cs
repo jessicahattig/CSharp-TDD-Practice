@@ -100,6 +100,7 @@ namespace ShapeTracker.Tests
       Rectangle rec1 = new Rectangle(4, 8);
       Rectangle rec2 = new Rectangle(9, 5);
       Rectangle rec3 = new Rectangle(2, 5);
+      List<Rectangle> expected = new List<Rectangle> { rec1, rec2, rec3 };
       //Act
       List<Rectangle> actualResult = Rectangle.GetAll();
       //Assert

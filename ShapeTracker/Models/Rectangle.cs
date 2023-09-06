@@ -33,5 +33,5 @@ namespace ShapeTracker.Models
     {
       return _instances;
     }
-    }
   }
+}
