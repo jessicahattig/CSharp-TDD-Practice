@@ -6,7 +6,7 @@ using System;
 namespace ShapeTracker.Tests
 {
   [TestClass]
-  public class TriangleTests : IDisposable
+   public class TriangleTests : IDisposable
   {
     public void Dispose()
     {
