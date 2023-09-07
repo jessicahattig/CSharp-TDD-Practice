@@ -82,7 +82,7 @@ namespace ShapeTracker.Tests
       Assert.AreEqual("it's a square, which is a special rectangle.", recType);
     }
 
-        [TestMethod]
+    [TestMethod]
     public void CheckType_DeterminesWhenRectangle_String()
     {
       // Arrange
@@ -130,5 +130,17 @@ namespace ShapeTracker.Tests
       //Assert
       CollectionAssert.AreEqual(expected, Rectangle.GetAll());
     }
+
+    [TestMethod]
+    public void GetArea_CalculatesAreaofRectangle_Int()
+    {
+      //Arrange
+      Rectangle rec1 = new Rectangle(2, 5);
+      int expectedArea = rec1.Side1 * rec1.Side2;
+      //Act
+      int actualArea = rec1.GetArea();
+      //Assert
+      Assert.AreEqual(expectedArea, actualArea);
+    }     
   }
 }

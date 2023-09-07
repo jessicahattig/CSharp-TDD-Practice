@@ -52,5 +52,11 @@ namespace ShapeTracker.Models
     {
       _instances.Clear();
     }
+
+    public int GetArea()
+    {
+      return Side1 * Side2;
+    }
+
   }
 }
