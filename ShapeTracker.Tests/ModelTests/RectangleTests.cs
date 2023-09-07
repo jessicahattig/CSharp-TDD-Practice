@@ -6,12 +6,12 @@ using System;
 namespace ShapeTracker.Tests
 {
   [TestClass]
-  public class RectangleTests //: IDisposable
+   public class RectangleTests : IDisposable
   {
-    // public void Dispose()
-    // {
-    //   Rectangle.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Rectangle.ClearAll();
+    }
   
 
     [TestMethod]
@@ -99,12 +99,36 @@ namespace ShapeTracker.Tests
       //Arrange
       Rectangle rec1 = new Rectangle(4, 8);
       Rectangle rec2 = new Rectangle(9, 5);
-      Rectangle rec3 = new Rectangle(2, 5);
-      List<Rectangle> expected = new List<Rectangle> { rec1, rec2, rec3 };
+      List<Rectangle> expected = new List<Rectangle> { rec1, rec2, };
       //Act
       List<Rectangle> actualResult = Rectangle.GetAll();
+
+      Console.WriteLine("Expected:");
+      foreach (var rect in expected)
+      {
+        Console.WriteLine($"Side1: {rect.Side1}, Side2: {rect.Side2}");
+      }
+
+      Console.WriteLine("Actual:");
+      foreach (var rect in actualResult)
+      {
+        Console.WriteLine($"Side1: {rect.Side1}, Side2: {rect.Side2}");
+      }
       //Assert
       CollectionAssert.AreEqual(expected, actualResult);
+    }
+
+    [TestMethod]
+    public void ClearAll_DeletesAllRectanglesInList_Void()
+    {
+      //Arrange
+      Rectangle rec1 = new Rectangle(2, 5);
+      Rectangle rec2 = new Rectangle(6, 4);
+      List<Rectangle> expected = new List<Rectangle> {};
+      //Act 
+      Rectangle.ClearAll();
+      //Assert
+      CollectionAssert.AreEqual(expected, Rectangle.GetAll());
     }
   }
 }
